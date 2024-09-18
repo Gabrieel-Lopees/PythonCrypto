@@ -7,12 +7,12 @@ z = "legal"
 username = input ("Seu nome: ")
 print ("Olá, ", username)
 
-print (x, y, z)'''
+print (x, y, z) '''
 
 print("Olá Mundo")
 
-x = input ("Variavel um:")
-y = input ("Variavel dois: ")
+x = int(input ("Variavel um:"))
+y = int(input ("Variavel dois: "))
 
 if x > y:
     print("X é maior que Y!")
