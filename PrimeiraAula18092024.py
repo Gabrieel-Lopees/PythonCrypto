@@ -1,18 +1,11 @@
-'''Primeira aula pratica de python em cryptografia 
-
-x = "pyhton"
-y = "é"
-z = "legal"
-
-username = input ("Seu nome: ")
-print ("Olá, ", username)
-
-print (x, y, z) '''
+#Exercicio 1
 
 '''print("Olá Mundo")'''
 
-'''x = int(input ("Variavel um:"))
-y = int(input ("Variavel dois: "))
+#Exercicio 2
+
+'''x = int(input ("Variavel X:"))
+y = int(input ("Variavel Y: "))
 
 if x > y:
     print("X é maior que Y!")
@@ -22,7 +15,9 @@ elif y == x:
 else:
     print("Y é maior que X!")'''
     
-x = int(input ("Variavel X:"))
+#Exercicio 3
+    
+'''x = int(input ("Variavel X:"))
 y = int(input ("Variavel Y: "))
 z = int(input ("Variavel Z: "))
 
@@ -34,4 +29,12 @@ elif z > x and y > x:
     print("X é a menor")
 #verificar se é Y
 else:
-    print("Y é a menor")
+    print("Y é a menor")'''
+    
+#Exercicio 4
+
+i = int(input ("Escreva sua variavel: "))
+
+while i < 1000:
+    print(i)
+    i += 1
