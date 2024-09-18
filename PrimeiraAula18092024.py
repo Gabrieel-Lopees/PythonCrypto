@@ -33,8 +33,42 @@ else:
     
 #Exercicio 4
 
-i = int(input ("Escreva sua variavel: "))
+'''i = int(input ("Escreva sua variavel: "))
 
 while i < 1000:
     print(i)
-    i += 1
+    i += 1'''
+    
+#Exercicio 5
+
+'''num = int(input ("Escreva uma variavel: "))
+
+for i in range(1, 11):
+    resultado = num * i
+    print(f"{num} x {i} = {resultado}")'''
+    
+#Exercicio 6
+
+'''num = int(input ("Escreva uma numero e dirá se é par ou n: "))
+
+if num % 2 == 0:
+    print("Seu numero {num} é par")
+    
+else:
+    print("Seu numero {num} é impar")'''
+
+#Exercicio 7
+
+num = int(input ("Escreva uma numero e dirá se é primo ou n: "))
+
+if num > 1:
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            print(f"O numero {num} não é primo")
+            break
+        else:
+            print(f"o numero {num} é primo")
+    
+else:
+        print(f"o numero {num} não é primo")
+            
