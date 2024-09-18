@@ -7,6 +7,7 @@ if num > 1:
             break
         else:
             print(f"o numero {num} é primo")
+            break
     
 else:
         print(f"o numero {num} não é primo")
