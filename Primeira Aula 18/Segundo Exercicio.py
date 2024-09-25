@@ -7,5 +7,5 @@ elif y == x:
     print("São iguais!")
     
 else:
-    print("Y é maior que X!")'''
+    print("Y é maior que X!")
     
