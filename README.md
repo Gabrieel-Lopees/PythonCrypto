@@ -78,7 +78,7 @@ pem = private_key.private_bytes(
     encryption_algorithm=serialization.BestAvailableEncryption(b"minha-senha")
 )
 
-with open("private_key.pem", "wb") as f:
+with open("private_ke]y.pem", "wb") as f:
     f.write(pem)
 ```
 
