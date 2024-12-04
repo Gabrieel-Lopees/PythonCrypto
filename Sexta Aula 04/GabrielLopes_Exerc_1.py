@@ -35,7 +35,7 @@ def main():
     mensagem = input("Digite a mensagem a ser criptografada: ")
     
     mensagem_encriptada = criptografar(mensagem)
-    print("Mensagem criptografada: ", mensagem_encriptada)
+    print("Mensagem criptografada:", mensagem_encriptada)
     
     mensagem_descriptografada = descriptografar(mensagem_encriptada)
     print("Mensagem descriptografada: ", mensagem_descriptografada)
