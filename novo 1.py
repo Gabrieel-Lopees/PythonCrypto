@@ -2,6 +2,7 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 import os
 
+
 def gerar_chaves():
     chave = RSA.generate(2048)  
     chave_privada = chave.export_key()  
