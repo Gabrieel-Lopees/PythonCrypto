@@ -1,100 +1,106 @@
+# PythonCrypto: Criptografia da Introdução à Prática
 
-# Python Criptografia Segundo Semestre 2024
+Este repositório compila códigos e exemplos práticos de **criptografia** implementados em **Python**, desenvolvidos durante o curso *"Criptografia: da Introdução à Prática"*. O projeto abrange conceitos fundamentais e práticas de criptografia simétrica, assimétrica e hashing.
 
-Este repositório contém os materiais e questões de criptografia usando Python. Ele abrange conceitos essenciais de criptografia e será atualizado até o fim desse semestre.
+## 🔧 Tecnologias Utilizadas
 
-## Índice
+- **Linguagem:** Python 3.x
+- **Bibliotecas:**
+  - `cryptography`
+  - `PyCryptodome`
 
-- [Instalação](#instalação)
-- [Exemplos de Uso](#exemplos-de-uso)
-- [Estudos e Links Úteis](#estudos-e-links-úteis)
-- [Contribuindo](#contribuindo)
-- [Licença](#licença)
+---
 
-## Instalação
+## 🔍 Conteúdo do Repositório
 
-Para começar, você precisará de Python 3.x instalado. Recomendamos o uso de um ambiente virtual para gerenciar dependências.
+| Pasta/Arquivo     | Descrição                                                                 |
+|-------------------|------------------------------------------------------------------------------|
+| `PrimeiraAula`    | Introdução à criptografia: conceitos iniciais e códigos básicos.         |
+| `SegundaAula`     | Criptografia simétrica usando AES (modo ECB e CBC).                         |
+| `TerceiraAula`    | Criptografia assimétrica com RSA: geração de chaves e encriptação.        |
+| `QuartaAula`      | Hashing e verificação de integridade usando SHA-256.                       |
+| `QuintaAula`      | Uso prático: assinaturas digitais.                                          |
+| `SextaAula`       | Exercícios finais: combinação de métodos criptográficos.                  |
+| `chave_privada.pem` | Exemplo de chave privada gerada.                                           |
+| `chave_publica.pem` | Exemplo de chave pública gerada.                                           |
 
-### 1. Clonar o repositório
+---
 
-```bash
-git clone [https://github.com/Gabrieel-Lopees/PythonCrypto.git]
-cd PythonCrypto
-```
+## 🛠️ Instalação e Configuração
 
-### 2. Criar um ambiente virtual e instalar dependências
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/Gabrieel-Lopees/PythonCrypto.git
+   cd PythonCrypto
+   ```
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Para Linux/macOS
-venv\Scripts\activate     # Para Windows
+2. **Crie um ambiente virtual e instale as dependências:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Linux/macOS
+   venv\Scripts\activate     # Windows
+   
+   pip install -r requirements.txt
+   ```
 
-pip install -r requirements.txt
-```
+---
 
-### 3. Dependências
+## 🔑 Exemplos de Uso
 
-O arquivo `requirements.txt` inclui as seguintes bibliotecas:
-
-- [cryptography](https://cryptography.io/en/latest/)
-- [PyCryptoDome](https://www.pycryptodome.org/)
-  
-Instale todas com:
-
-```bash
-pip install cryptography pycryptodome
-```
-
-## Exemplos de Uso
-
-### 1. Criptografia Simétrica com AES
-
+### Criptografia Simétrica com AES
 ```python
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 
-key = get_random_bytes(16)
+# Geração de chave e inicialização
+key = get_random_bytes(16)  # Chave de 16 bytes
 cipher = AES.new(key, AES.MODE_EAX)
 nonce = cipher.nonce
+
+# Encripta mensagem
 ciphertext, tag = cipher.encrypt_and_digest(b"Mensagem secreta")
+print("Texto cifrado:", ciphertext)
 ```
 
-### 2. Criptografia Assimétrica com RSA
-
+### Criptografia Assimétrica com RSA
 ```python
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 
 # Gerar chave privada
-private_key = rsa.generate_private_key(
-    public_exponent=65537,
-    key_size=2048
-)
+private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
 
-# Serializar chave privada para salvar em um arquivo
+# Serializar chave privada
 pem = private_key.private_bytes(
     encoding=serialization.Encoding.PEM,
     format=serialization.PrivateFormat.TraditionalOpenSSL,
-    encryption_algorithm=serialization.BestAvailableEncryption(b"minha-senha")
+    encryption_algorithm=serialization.BestAvailableEncryption(b"senha-secreta")
 )
-
-with open("private_ke]y.pem", "wb") as f:
+with open("private_key.pem", "wb") as f:
     f.write(pem)
 ```
 
-## Estudos e Links Úteis
+---
 
-Aqui estão alguns recursos úteis para aprender mais sobre criptografia em Python e segurança:
+## 📖 Referências
+- [Documentação Cryptography](https://cryptography.io/)
+- [PyCryptodome](https://www.pycryptodome.org/)
+- [Conceitos de RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 
-- [Documentação da Biblioteca Cryptography](https://cryptography.io/en/latest/)
-- [PyCryptodome - Guia Completo](https://www.pycryptodome.org/)
-- [RSA - Introdução e Implementação](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
-- [OWASP Cryptography Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
-- [Guia de Segurança em Python](https://realpython.com/python-security/)
+---
 
-## Contribuindo
+## 🌟 Objetivo
+Este projeto serve como uma base de aprendizado e referência pessoal para aplicações de criptografia em Python, podendo ser expandido para soluções mais avançadas.
 
-Contribuições são bem-vindas! Contate Gabrieel-Lopees para saber como contribuir!
+---
+
+## 🤝 Contribuições
+Contribuições são bem-vindas! Para sugerir melhorias ou correções, abra uma *issue* ou *pull request*.
+
+---
+
+## 💍 Autor
+Desenvolvido por **Gabriel de Andrade Lopes** durante o segundo semestre de 2024.
 
 ## Licença
 
