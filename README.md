@@ -91,12 +91,7 @@ with open("private_key.pem", "wb") as f:
 ---
 
 ## 🌟 Objetivo
-Este projeto serve como uma base de aprendizado e referência pessoal para aplicações de criptografia em Python, podendo ser expandido para soluções mais avançadas.
-
----
-
-## 🤝 Contribuições
-Contribuições são bem-vindas! Para sugerir melhorias ou correções, abra uma *issue* ou *pull request*.
+Este projeto serve como uma base de aprendizado e referência para aplicações de criptografia em Python, podendo ser expandido para soluções mais avançadas.
 
 ---
 
