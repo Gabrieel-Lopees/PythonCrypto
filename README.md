@@ -1,11 +1,11 @@
 # PythonCrypto: Criptografia da Introdução à Prática
 
 
-Este repositório compila códigos e exemplos práticos de **criptografia** implementados em **Python**, desenvolvidos durante o curso *"Criptografia: da Introdução à Prática"*. O projeto abrange conceitos fundamentais e práticas de criptografia simétrica, assimétrica e hashing.
+Este repositório compila códigos e exemplos práticos de **criptografia** implementados em **Python**. O projeto abrange conceitos fundamentais e práticas de criptografia simétrica, assimétrica e hashing.
 
 ## 🔧 Tecnologias Utilizadas
 
-- **Linguagem:** Python 3.x
+- **Linguagem:** Python
 - **Bibliotecas:**
   - `cryptography`
   - `PyCryptodome`
